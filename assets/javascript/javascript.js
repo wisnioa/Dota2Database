@@ -5,6 +5,7 @@ var searchResponse = "";
 
 
 
+
 $.ajax({
   url: dotaURL,
   method: "GET"
@@ -108,21 +109,15 @@ $.ajax({
    search(heroName); 
   });
 
-  function handleAPILoaded() {
-    var API = "AIzaSyDJxAZT-3prr7wcDfJdBdU_Axx1iShsAcg";
-    gapi.client.setApiKey(API);
-    gapi.client.load('youtube', 'v3');
-  };
-
-
- function search(heroName) { //gage (passing "item, not this remember THIS is a reserved word")
+ 
+ function search(heroName) { 
     console.log("searching now"); //gage
     console.log("Q = " + heroName); //gage
     
     
     var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=" + heroName +
-    " " + "dota" + "&key=AIzaSyDJxAZT-3prr7wcDfJdBdU_Axx1iShsAcg";
-    //gage below here i made "dota" a string
+  " " + "dota" + "&key=AIzaSyBUYQQ_sGg0bjCe7BV2hdBiGA7E22oKWRU";
+    
     $.ajax({
       url: queryURL,
       method: "GET"
